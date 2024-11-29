@@ -1,0 +1,117 @@
+/* Resetando algumas margens e padding padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo o fundo e o estilo da fonte */
+body {
+    background-color: #f1f1f1;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Cabeçalho com título */
+header h1 {
+    font-size: 3rem;
+    color: #ff2d00;
+    margin-bottom: 20px;
+}
+
+/* Estilo da árvore de Natal */
+.tree-container {
+    position: relative;
+    display: inline-block;
+}
+
+.tree {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    margin-top: 50px;
+}
+
+/* Estilo das ramificações da árvore */
+.branch {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 70px solid #006400;
+}
+
+.branch-1 {
+    top: 20px;
+    left: -50px;
+}
+
+.branch-2 {
+    top: 60px;
+    left: -70px;
+}
+
+.branch-3 {
+    top: 100px;
+    left: -90px;
+}
+
+.branch-4 {
+    top: 140px;
+    left: -110px;
+}
+
+.branch-5 {
+    top: 180px;
+    left: -130px;
+}
+
+/* Estilo da estrela no topo da árvore */
+.star {
+    position: absolute;
+    top: -30px;
+    left: 75px;
+    width: 40px;
+    height: 40px;
+    background-color: gold;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+/* Estilo da mensagem de Natal */
+.message {
+    font-size: 1.5rem;
+    margin-top: 40px;
+    color: #333;
+}
+
+/* Efeito de animação de neve */
+@keyframes snow {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: -10px;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/snow.png') repeat;
+    pointer-events: none;
+    animation: snow 10s linear infinite;
+}
+
+/* Estilo do rodapé */
+footer {
+    margin-top: 50px;
+    font-size: 1rem;
+    color: #666;
+}
